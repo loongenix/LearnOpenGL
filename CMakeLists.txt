@@ -22,5 +22,6 @@ add_executable(LearnOpenGL ${BASE_SOURCEFILE} HelloTriangle.cpp HelloTriangle.h)
 add_executable(HelloShader ${BASE_SOURCEFILE} HelloShader.cpp HelloShader.h)
 add_executable(HelloTexture ${BASE_SOURCEFILE} HelloTexture.cpp HelloTexture.h)
 add_executable(HelloTransform ${BASE_SOURCEFILE} HelloTransform.cpp HelloTransform.h)
+add_executable(Hello3D ${BASE_SOURCEFILE} Hello3D.cpp Hello3D.h)
 
 

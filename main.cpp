@@ -2,8 +2,7 @@
 #include <GLFW/glfw3.h>
 
 #include <iostream>
-#include "HelloTexture.h"
-#include "HelloTransform.h"
+#include "Hello3D.h"
 
 void framebuffer_size_callback(GLFWwindow *window, int width, int height);
 
@@ -43,8 +42,8 @@ int main() {
         std::cout << "Failed to initialize GLAD" << std::endl;
         return -1;
     }
-
-    HelloTransform draw ;
+    glEnable(GL_DEPTH_TEST);
+    Hello3D draw ;
     draw.init();
     // uncomment this call to draw in wireframe polygons.
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
@@ -59,7 +58,7 @@ int main() {
         // render
         // ------
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         draw.draw();
 
 
